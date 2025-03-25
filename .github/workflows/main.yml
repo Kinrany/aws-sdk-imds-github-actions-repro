@@ -1,0 +1,19 @@
+name: Run CLI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  run-cli:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+      
+      - name: Build and run
+        run: |
+          cargo build
+          cargo run
