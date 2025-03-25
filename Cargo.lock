@@ -133,6 +133,7 @@ name = "aws-sdk-imds-github-actions-repro"
 version = "0.1.0"
 dependencies = [
  "aws-config",
+ "aws-credential-types",
  "tokio",
 ]
 
